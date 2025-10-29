@@ -1,0 +1,19 @@
+package ex01;
+
+public class BreakExample02 {
+
+	public static void main(String[] args) {
+
+		int sum = 0, i = 0;
+		while(true) {
+			i++;
+			sum +=  i; 
+			
+			if(sum >= 1000)
+				break;
+		}
+		System.out.println("총합 : " + sum + " i: " + i);
+		System.out.println("프로그램 종료!");
+	}
+
+}

@@ -1,0 +1,11 @@
+package ex02;
+
+public class ArrayEx01 {
+
+	public static void main(String[] args) {
+		int i;
+		System.out.println(i);
+		int[] number = new int[5];
+	}
+
+}

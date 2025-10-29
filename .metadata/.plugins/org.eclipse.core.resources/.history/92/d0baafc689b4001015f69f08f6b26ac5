@@ -1,0 +1,23 @@
+package ex07;
+
+public class AccountTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Account {
+	private int balance;
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	
+	
+}

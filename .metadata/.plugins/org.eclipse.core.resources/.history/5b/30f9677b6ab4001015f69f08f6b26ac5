@@ -1,0 +1,13 @@
+package ex06;
+
+public class 함수오버로딩 {
+
+	public static void main(String[] args) {
+
+	}
+	
+	int func() {
+		System.out.println("------------------");
+	}
+
+}

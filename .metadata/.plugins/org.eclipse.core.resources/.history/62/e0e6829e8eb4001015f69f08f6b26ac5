@@ -1,0 +1,40 @@
+package ex07;
+
+public class BankTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Account2 {
+	private String accountNumber;
+	private String accounttName;
+	private long balance;
+	
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public String getAccounttName() {
+		return accounttName;
+	}
+	public void setAccounttName(String accounttName) {
+		this.accounttName = accounttName;
+	}
+	public long getBalance() {
+		return balance;
+	}
+	public void setBalance(long balance) {
+		this.balance = balance;
+	}
+	
+	
+}
+
+class BankApplication {
+	Account2 [] acct = new Account2[100];
+}

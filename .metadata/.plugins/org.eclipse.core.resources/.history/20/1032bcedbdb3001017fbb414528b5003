@@ -1,0 +1,15 @@
+package ex01;
+
+public class ClassEx01 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+class Student {
+	String name;
+	int age;
+	String adderss;
+}

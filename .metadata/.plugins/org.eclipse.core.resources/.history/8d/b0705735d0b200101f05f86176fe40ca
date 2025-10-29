@@ -1,0 +1,41 @@
+package ex01;
+
+import java.util.Scanner;
+
+public class WhileSample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = 0, money = 0;
+		while (true) {
+			System.out.println("-----------------------------");
+			System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
+			System.out.println("-----------------------------");
+			System.out.print("선택>");
+			num = Integer.parseInt(sc.nextLine());
+			switch(num) {
+			case 1:
+				System.out.print("예금액>");
+				break;
+			case 2:
+				System.out.print("출금액>");
+				break;
+			case 3:
+				System.out.print("잔고>");
+				break;
+			case 4:
+				break;
+			}
+			
+			if (num == 4) 
+				break;
+				
+			money = Integer.parseInt(sc.nextLine());
+			System.out.println(money);
+
+		}
+		
+		System.out.println("프로그램 종료");
+	}
+
+}

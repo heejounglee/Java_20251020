@@ -1,0 +1,20 @@
+package ex07;
+
+public class ShopService {
+
+	//public static void main(String[] args) {
+	//private 접근 권한을 갖는 정적 필드 선언과 초기화
+	private static ShopService single = new ShopService(); 
+	ShopService obj1 = ShopService.getInstance();
+	ShopService obj2 = ShopService.getInstance();
+	//}
+	
+	//private 접근 권한을 갖는 생성자
+	private ShopService() {}
+	
+	//public 접근 권한을 갖는 정적 메서드 선언
+	public static ShopService getInstance() {
+		return singleton;
+	}
+
+}

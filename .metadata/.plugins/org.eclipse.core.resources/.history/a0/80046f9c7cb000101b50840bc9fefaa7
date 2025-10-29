@@ -1,0 +1,14 @@
+package ex01;
+
+public class IF조건문08 {
+
+	public static void main(String[] args) {
+		double num = Math.random();
+		
+		System.out.println(num);
+		
+		System.out.println("-------프로그램 종료--------");
+
+	}
+
+}

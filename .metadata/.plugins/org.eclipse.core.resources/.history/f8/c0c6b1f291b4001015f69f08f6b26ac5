@@ -1,0 +1,13 @@
+package ex11;
+
+public class StaticEx01Main {
+
+	public static void main(String[] args) {
+		System.out.println(StaticEx01.ban);
+		StaticEx01.test();
+		
+		StaticEx01 s1 = new StaticEx01();
+		StaticEx01 s2 = new StaticEx01();
+	}
+
+}

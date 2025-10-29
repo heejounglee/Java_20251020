@@ -1,0 +1,69 @@
+package ex04;
+
+import java.util.Arrays;
+
+/* 
+ * 1. 배열 10개 방에 랜덤하게 1~100 사이 값을 저장
+ * 2. 배열에서 최대값, 최소값을 출력
+ * 3. 10개 값 총점 / 평균 구하기
+ * 4. 10개 값 정렬 (오름차순)
+ */
+public class 연습문제 {
+
+	public static void main(String[] args) {
+		int []arrNum = new int[10];
+		int []sortNum = new int[10];
+		int max, min;
+		
+		int sum = 0;
+		double avg;
+		for (int i=0; i<arrNum.length; i++) {
+			arrNum[i] = (int)(Math.random() * 100) + 1;
+		    sum += arrNum[i]; 
+		}
+		avg = sum / arrNum.length;
+		
+		System.out.println(Arrays.toString(arrNum));
+		System.out.println("총점 : " + sum + " 평균 : " + avg);
+		
+		max = arrNum[0];
+		min = arrNum[0];
+		sortNum[0] = arrNum[0];
+		for (int i=1; i<=arrNum.length-1; i++) {
+		    if (max < arrNum[i]) {
+		    	max = arrNum[i];
+		    }
+		    
+		    if (min > arrNum[i]) {
+		    	min = arrNum[i];
+		    }
+		}
+		System.out.println("최대값 : " + max + " 최소값 : " + min);
+		
+		min = arrNum[0];
+		for (int i=0;i<arrNum.length; i++) {
+			System.out.println("----- i = " +  i);
+			for (int j=1; j<arrNum.length; j++) {
+				System.out.println("j = " +  j + " " + arrNum[j]);
+				if (arrNum[j] <= min) {
+					min = arrNum[j];
+				}
+			}
+		
+		  sortNum[i] = min;	
+		  //System.out.println(sortNum[i]);
+		}
+		
+		for (int i=0;i<arrNum.length; i++) {
+			for (int j=0; j<arrNum.length-i-1; j++) {
+				if (arrNum[j] > arrNum[j+1]) {
+					int tmp = arrNum[j+1];
+					arrNum[j+1] = arrNum[j];
+					arrNum[j] = tmp;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(arrNum));
+	}
+
+}

@@ -1,0 +1,26 @@
+package ex07;
+
+public class MemberTest {
+
+	public static void main(String[] args) {
+		Member user1 = new Member("홍길동","hong");
+		
+		System.out.println("name : " +user1.name + "id : " + user1.id);
+	}
+	
+}
+
+class Member {
+	private String name;
+	private String id;
+	private String password;
+	private int age;
+	
+	public Member() {}
+	
+	public Member(String name, String id) {
+		this.name = name;
+		this.id = id;
+	}
+	
+}

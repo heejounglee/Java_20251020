@@ -1,0 +1,21 @@
+package ex07;
+
+public class BankTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Account2 {
+	private String accountNumber;
+	private String accounttName;
+	private long balance;
+	
+	
+}
+
+class BankApplication {
+	Account2 [] acct = new Account2[100];
+}

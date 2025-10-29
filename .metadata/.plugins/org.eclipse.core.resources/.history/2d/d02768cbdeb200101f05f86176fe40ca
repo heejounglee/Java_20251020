@@ -1,0 +1,20 @@
+package ex01;
+
+public class CharAtEx01 {
+
+	public static void main(String[] args) {
+		String subject = "자바 프로그래밍";
+		
+		char ch = subject.charAt(0);
+		System.out.println(ch);
+		
+		int len =subject.length();
+		System.out.println("문자열 길이 : " + len);
+		
+		System.out.println("--------문자열 대체(변경)---------");
+		subject.replace("자바", "파이썬");
+		
+		System.out.println("after : " + subject);
+	}
+
+}

@@ -1,0 +1,23 @@
+package ex02;
+
+import java.util.Arrays;
+
+public class ArrayEx04 {
+
+	public static void main(String[] args) {
+		int[] numArr = {90,80,70,60,50};
+		
+		System.out.println("Old numArr 길이 : " + numArr.length);
+		
+		int[] temp = new int[10];
+		for(int i=0; i<numArr.length; i++) {
+			temp[i] = numArr[i];
+		}
+		
+		numArr = temp;
+		
+		System.out.println("New numArr 길이 : " + numArr.length);
+		System.out.println(Arrays.toString(numArr));
+	}
+
+}

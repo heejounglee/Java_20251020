@@ -1,0 +1,9 @@
+package ex01;
+
+public class IF조건문06 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

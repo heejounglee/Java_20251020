@@ -1,0 +1,22 @@
+package ex01;
+
+public class ClassEx01 {
+
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		s1.name = "";
+		s1.age = 29;
+		s1.adderss= ""d
+	}
+
+}
+
+class Student {
+	String name;
+	int age;
+	String adderss;
+	
+	void study() {
+		System.out.println(name + " Java 공부 중 입니다.");
+	}
+}

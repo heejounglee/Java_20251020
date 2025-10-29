@@ -1,0 +1,18 @@
+package ex07;
+
+public class ShopService {
+
+	//public static void main(String[] args) {
+
+		private static ShopService singleton = new ShopService(); 
+		ShopService obj1 = ShopService.getInstance();
+		ShopService obj2 = ShopService.getInstance();
+	//}
+	
+	private ShopService {}
+	
+	public static ShopService getInstance() {
+		return singleton;
+	}
+
+}

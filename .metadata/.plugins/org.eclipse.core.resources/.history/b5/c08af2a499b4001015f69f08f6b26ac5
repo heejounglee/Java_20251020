@@ -1,0 +1,137 @@
+package ex07;
+
+import java.util.Scanner;
+
+public class BankTest {
+
+	public static void main(String[] args) {
+
+		BankApplication bankTest = new BankApplication();
+		bankTest.saveMoney();
+	}
+
+}
+
+class Account2 {
+	private String accountNumber;
+	private String accounttName;
+	private long money;
+	private long balance;
+	
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public String getAccounttName() {
+		return accounttName;
+	}
+	public void setAccounttName(String accounttName) {
+		this.accounttName = accounttName;
+	}
+	public long getMoney() {
+		return money;
+	}
+	public void setMoney(long money) {
+		this.money = money;
+	}
+	public long getBalance() {
+		return balance;
+	}
+	public void setBalance(long balance) {
+		this.balance = balance;
+	}
+	
+	
+}
+
+class BankApplication {
+	
+	public BankApplication() {
+		Account2 [] acct = new Account2[100];
+	}
+	
+	public void saveMoney() {
+		int selection;
+		int accountCount = 0;
+		
+		while(accountCount < 100) {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("--------------------------------");
+			System.out.println("1.계좌생성|2.계좌목록|3.예금|4.출금|5.종료");
+			System.out.println("--------------------------------");
+			System.out.print("선택>");
+			selection = Integer.parseInt(sc.nextLine());
+			
+			switch (selection) {
+				case 1:
+					System.out.println("---------");
+					System.out.println("계좌생성");
+					System.out.println("---------");
+					System.out.print("계좌번호:");
+					acct[accountCount].setAccountNumber(sc.nextLine());
+					System.out.print("계좌주:");
+					acct[accountCount].setAccounttName(sc.nextLine());
+					System.out.print("초기입금액:");
+					acct[accountCount].setBalance(Long.parseLong(sc.nextLine()));
+					System.out.println("결과: 계좌가 생성되었습니다.");
+					accountCount++;
+					break;
+				case 2:
+					System.out.println("---------");
+					System.out.println("계좌목록");
+					System.out.println("---------");
+					for(int i=0; i<accountCount; i++) {
+						System.out.println(acct[i].getAccountNumber() + "  " + acct[i].getAccounttName() +  "  " + acct[i].getBalance());						
+					}
+					break;
+				case 3:
+					String tmpAccountNumber;
+					System.out.println("---------");
+					System.out.println("예금");
+					System.out.println("---------");
+					System.out.print("계좌번호:");
+					tmpAccountNumber = sc.nextLine();
+					acct[accountCount].setAccountNumber(sc.nextLine());
+					System.out.print("입금액:");
+					for(int i=0; i<accountCount; i++) {
+						if (acct[i].getAccountNumber().equals(tmpAccountNumber)) {
+							acct[i].setMoney(Long.parseLong(sc.nextLine()));
+							acct[i].setBalance(acct[i].getBalance() + acct[i].getMoney());
+							break;
+						}
+					}
+					break;
+				case 4:
+					System.out.println("---------");
+					System.out.println("출금");
+					System.out.println("---------");
+					System.out.print("계좌번호:");
+					tmpAccountNumber = sc.nextLine();
+					acct[accountCount].setAccountNumber(sc.nextLine());
+					System.out.print("출금액:");
+					for(int i=0; i<accountCount; i++) {
+						if (acct[i].getAccountNumber().equals(tmpAccountNumber)) {
+							acct[i].setMoney(Long.parseLong(sc.nextLine()));
+							acct[i].setBalance(acct[i].getBalance() - acct[i].getMoney());
+							System.out.println("결과 출금이 성공되었습니다.");
+							break;
+						}
+					}
+					break;
+				case 5:
+					break;
+				default:
+					break;
+			}
+			
+			if (selection == 5) 
+				break;
+			
+		} //end while 
+	}
+	
+	
+}

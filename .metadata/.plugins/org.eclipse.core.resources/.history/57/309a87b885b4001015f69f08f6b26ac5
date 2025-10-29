@@ -1,0 +1,28 @@
+package ex07;
+
+public class PrinterTest {
+
+	public static void main(String[] args) {
+		Printer printer = new Printer();
+	}
+
+}
+
+
+class Printer {
+	void println (int value) {
+		System.out.println(value);
+	}
+	
+	void println (boolean value) {
+		System.out.println(value);
+	}
+	
+	void println (double value) {
+		System.out.println(value);
+	}
+	
+	void println (String value) {
+		System.out.println(value);
+	}
+}

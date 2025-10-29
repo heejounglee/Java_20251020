@@ -1,0 +1,19 @@
+package ex01;
+
+public class ClassEx01 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+class Student {
+	String name;
+	int age;
+	String adderss;
+	
+	void study() {
+		System.out.println(name + " Java 공부 중 입니다.");
+	}
+}

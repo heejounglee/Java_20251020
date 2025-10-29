@@ -1,0 +1,12 @@
+package ex01;
+
+public class 비교연산자 {
+
+	public static void main(String[] args) {
+		int numA = 5;
+		int numB = 6;
+		
+		System.out.println(numA == numB);
+	}
+
+}

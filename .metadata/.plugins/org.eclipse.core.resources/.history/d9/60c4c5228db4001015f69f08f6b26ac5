@@ -1,0 +1,13 @@
+package ex07;
+
+public class BankTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Account2 {
+	
+}

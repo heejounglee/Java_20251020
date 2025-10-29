@@ -1,0 +1,9 @@
+package ex11;
+
+public class StaticEx01Main {
+
+	public static void main(String[] args) {
+
+	}
+
+}

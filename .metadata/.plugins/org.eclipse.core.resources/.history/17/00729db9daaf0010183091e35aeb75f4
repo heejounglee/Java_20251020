@@ -1,0 +1,32 @@
+package ex01;
+
+public class IF조건문06 {
+
+	public static void main(String[] args) {
+		int age = 4;
+		int fee = 2000;
+		double rate = 0;
+		
+		if(age>=65) {
+			fee = 0;
+		}else if(age>=20 & age<65) {
+			rate = 0;
+		}else if(age>=15 & age<20) {
+			rate = 0.2;
+		}else if(age>=7 & age<15) {
+			rate = 0.5;
+		}else {
+			fee = 0;
+		}
+		
+		if (fee != 0) {
+			fee = (int)(fee * (1- rate));
+		}
+		
+		System.out.println("나이" + age + "는 " + fee + "요금 입니다.");
+		
+		System.out.println("-------프로그램 종료--------");
+
+	}
+
+}

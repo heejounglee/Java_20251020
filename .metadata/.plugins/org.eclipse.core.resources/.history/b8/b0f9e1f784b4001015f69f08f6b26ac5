@@ -1,0 +1,16 @@
+package ex07;
+
+public class PrinterTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+
+class Printer {
+	void println (int value) {
+		System.out.println(value);
+	}
+}
