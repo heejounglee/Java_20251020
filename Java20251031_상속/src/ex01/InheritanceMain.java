@@ -7,6 +7,7 @@ public class InheritanceMain {
 		Student s1 = new Student("홍길동", 25, "천호중학교");
 		s1.study();
 		s1.eat();
+		System.out.println(s1);
 		
 		System.out.println("----------------------");
 		Teacher t1 = new Teacher("삼장법사", 50, "수학");
